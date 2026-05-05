@@ -558,14 +558,34 @@
       }, i * 110);
     });
   }
+
 async function sendMessage() {
   const text = document.getElementById('formMsg').value.trim();
+  const lowerText = text.toLowerCase();
 
-  // Easter egg
-  if (text.toLowerCase().includes("fortuna")) {
+  // Easter egg 1
+  if (lowerText.includes("fortuna")) {
     alert("Hai trovato un Easter Egg! 🎉");
     window.open("https://fra4884-cyber.github.io/Ruota/", "_blank");
   }
+
+  // Easter egg 2
+  if (lowerText.includes("easter egg")) {
+    alert("😎 Easter Egg segreto!");
+    window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
+  }
+
+  // Easter egg 3
+  if (lowerText.includes("matrix")) {
+    document.body.style.background = "black";
+    document.body.style.color = "lime";
+    document.body.style.fontFamily = "monospace";
+    alert("💻 Accesso alla Matrix...");
+  }
+
+
+    
+  
 
   // Se vuoto esci
   if (!text) return;
